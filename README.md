@@ -1,4 +1,5 @@
 # meetings-planner
+[Live Demo](https://myaff.github.io/meetings-planner/)
 
 ## Project setup
 ```
