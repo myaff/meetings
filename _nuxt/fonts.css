@@ -1,0 +1,47 @@
+/* === Roboto - regular */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Roboto-Regular.eot");
+	src: local("Roboto"),
+		local("Roboto-Regular"),
+		url("./font/Roboto-Regular.eot") format("embedded-opentype"),
+		url("./font/Roboto-Regular.woff2") format("woff2"),
+		url("./font/Roboto-Regular.woff") format("woff"),
+		url("./font/Roboto-Regular.ttf") format("truetype"),
+		url("./font/Roboto-Regular.svg") format("svg");
+}
+
+/* === Roboto - italic */
+@font-face {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Roboto-Italic.eot");
+	src: local("Roboto Italic"),
+		local("Roboto-Italic"),
+		url("./font/Roboto-Italic.eot") format("embedded-opentype"),
+		url("./font/Roboto-Italic.woff2") format("woff2"),
+		url("./font/Roboto-Italic.woff") format("woff"),
+		url("./font/Roboto-Italic.ttf") format("truetype"),
+		url("./font/Roboto-Italic.svg") format("svg");
+}
+
+/* === Roboto - 700 */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("./font/Roboto-Bold.eot");
+	src: local("Roboto Bold"),
+		local("Roboto-Bold"),
+		url("./font/Roboto-Bold.eot") format("embedded-opentype"),
+		url("./font/Roboto-Bold.woff2") format("woff2"),
+		url("./font/Roboto-Bold.woff") format("woff"),
+		url("./font/Roboto-Bold.ttf") format("truetype"),
+		url("./font/Roboto-Bold.svg") format("svg");
+}
