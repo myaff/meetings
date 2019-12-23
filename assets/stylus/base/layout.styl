@@ -1,0 +1,85 @@
+/* ==========================================================================
+  BASIC - LAYOUT
+   ========================================================================== */
+html, body {
+  background: #fff;
+  font: normal $font-size-base/1.5 $font-base;
+  color: #000;
+  overflow-x: hidden;
+}
+body {
+  min-width: initial;
+}
+
+.l-container {
+  relative();
+  margin-right: auto
+  margin-left: auto
+  width: 100%;
+  min-width: $container-widths.min;
+  container();
+}
+
+.layout {
+  min-size($container-widths.min, 100vh);
+  width: 100vw;
+  background $color--light;
+  color: inherit;
+
+  flexy(flex-start, center, nowrap, column);
+
+  &__panel {
+    fixed(0px, 0px);
+    size(60px, 100%);
+    z-index: 5;
+    padding: 20px;
+    background: $color--white;
+    box-shadow: 0 0 5px rgba(#000, 0.1);
+
+    @media $display-breakpoints.sm-and-up {
+      width: 80px;
+    }
+  }
+
+  &__main {
+    padding-left: 60px;
+    size(100%, 100vh);
+
+    @media $display-breakpoints.sm-and-up {
+      padding-left: 80px;
+    }
+    @media $display-breakpoints.md-and-up {
+      overflow: hidden;
+    }
+  }
+
+  &__header {
+    fixed(0px, 0px);
+    width: 100%;
+    z-index: 11;
+  }
+
+  &__page {
+    flex: 1 1 auto;
+    width 100%
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.st {
+  position: static;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}

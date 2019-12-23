@@ -1,0 +1,79 @@
+$use-color-pack-generator = false;
+$use-grid-generator = false;
+
+// Fonts
+// ============================================================
+$font-base = Roboto, Helvetica, Arial, sans-serif;
+$font-accent = $font-base;
+$font-size-base = 16px;
+
+/**COLOR*/
+$color--black = #000000;
+$color--black_light = #404040;
+
+$color--grey_dark = #929292;
+$color--grey = #D9D9D9;
+$color--grey_light = #f1f1f1;
+
+$color--light = #F5F5F5;
+$color--white = #FFFFFF;
+
+$color--primary = #3f51b5;
+$color--default = #0F1114;
+
+$color--error = #d31616;
+$color--success = #16d360;
+
+$color--red = #d31616;
+$color--red_light = rgba(211, 22, 22, 0.1);
+
+
+// Grid
+// ============================================================
+$grid-breakpoints := {
+  xs: 0
+  ms: 480px
+  sm: 768px
+  md: 1024px
+  lg: 1280px
+  xl: 1600px
+}
+
+$container-widths = {
+  min: 20rem, // 320px
+  medium: 71.25rem, // 1140px
+  max: 92rem // 1472px
+}
+
+
+$grid-gutter = 2rem
+$grid-gutter-md = 1.5rem;
+$grid-gutter-ms = 1.25rem
+$grid-columns = 12
+
+
+
+// Display
+// ============================================================
+$display-breakpoints := {
+  xs-only: "only screen and (max-width: %s)" % ($grid-breakpoints.ms - 1)
+  ms-only: "only screen and (min-width: %s) and (max-width: %s)" % ($grid-breakpoints.ms ($grid-breakpoints.sm - 1))
+  ms-and-down: "only screen and (max-width: %s)" % ($grid-breakpoints.sm - 1)
+  ms-and-up: "only screen and (min-width: %s)" % $grid-breakpoints.ms
+  sm-only: "only screen and (min-width: %s) and (max-width: %s)" % ($grid-breakpoints.sm ($grid-breakpoints.md - 1))
+  sm-and-down: "only screen and (max-width: %s)" % ($grid-breakpoints.md - 1)
+  sm-and-up: "only screen and (min-width: %s)" % $grid-breakpoints.sm
+  md-only: "only screen and (min-width: %s) and (max-width: %s)" % ($grid-breakpoints.md ($grid-breakpoints.lg  - 1))
+  md-and-down: "only screen and (max-width: %s )" % ($grid-breakpoints.lg - 1)
+  md-and-up: "only screen and (min-width: %s)" % $grid-breakpoints.md
+  lg-only: "only screen and (min-width: %s) and (max-width: %s)" % ($grid-breakpoints.lg ($grid-breakpoints.xl - 1))
+  lg-and-down: "only screen and (max-width: (%s - 1))" % $grid-breakpoints.xl
+  lg-and-up: "only screen and (min-width: %s)" % $grid-breakpoints.lg
+  xl-only: "only screen and (min-width: %s)" % $grid-breakpoints.xl
+}
+
+// State selectors
+hover-focus = '&:hover,&.is-hover,&:focus,&.is-focus';
+active = '&:active,&.is-active';
+hover-active = '&:hover,&.is-hover,&:active,&.is-active';
+hover-focus-active = '&:hover,&.is-hover,&:focus,&.is-focus,&:active,&.is-active';

@@ -1,0 +1,38 @@
+.meeting-row {
+  margin-bottom: 1em;
+  padding: 20px;
+  border: 1px solid $color--grey;
+  border-radius: 0.25em;
+  flexy(space-between, flex-start, wrap);
+  background: #fff;
+
+  @media $display-breakpoints.lg-and-up {
+    flex-wrap: nowrap;
+  }
+
+  &__info {
+    flex: 1 1 auto;
+
+    @media $display-breakpoints.sm-and-up {
+      margin-right: 1em;
+    }
+  }
+  &__meta {
+    flex: 0 0 auto;
+    margin-top: 1em;
+
+    @media $display-breakpoints.sm-and-up {
+      margin-top: 0;
+    }
+  }
+
+  &__state {
+    //margin-bottom: 1em;
+  }
+
+  &__title {
+    margin: 0.5em 0;
+  }
+  &__role {
+  }
+}

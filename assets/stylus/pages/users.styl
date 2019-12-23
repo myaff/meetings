@@ -1,0 +1,107 @@
+.page--users {
+  .users {
+    flexy(flex-start, stretch);
+    background: $color--light;
+
+    @media $display-breakpoints.md-and-up {
+      height: 100%;
+    }
+
+    &__list-area,
+    &__detail-area {
+      flex: 0 0 100%;
+
+      @media $display-breakpoints.md-and-up {
+        height: 100%;
+
+        > .vb {
+          height: 100%;
+        }
+      }
+    }
+    &__list-area {
+      z-index: 2;
+      //background: $color--light;
+      @media $display-breakpoints.md-and-up {
+        flex: 0 0 100%;
+      }
+    }
+    &.detail-opened .users__list-area {
+      @media $display-breakpoints.md-and-up {
+        flex: 0 0 50%;
+      }
+    }
+    &__detail-area {
+      @media $display-breakpoints.sm-and-down {
+        fixed(0px, 0px);
+        size(100%);
+        overflow-y: auto;
+        z-index: 5;
+        padding: 0;
+        background: #fff;
+      }
+      @media $display-breakpoints.md-and-up {
+        absolute(0px, 50%);
+        width: 50%;
+        z-index: 1;
+        background: darken($color--grey_light, 5%);
+        box-shadow: inset 0 0 20px rgba(#000, 0.05);
+      }
+    }
+    &__list-content {
+      padding: 20px;
+      background: $color--light;
+      @media $display-breakpoints.md-and-up {
+        width 50%
+        min-height: 100%;
+      }
+    }
+    &.detail-opened .users__list-content {
+      @media $display-breakpoints.md-and-up {
+        width: 100%;
+      }
+    }
+    &__detail-content {
+      padding: 0;
+
+      @media $display-breakpoints.md-and-up {
+        padding: 20px;
+        display: flex;
+        min-height: 100vh;
+      }
+    }
+    &__action-btn {
+      fixed();
+      z-index: 3;
+      right: 20px;
+      bottom: 20px;
+      box-shadow: 0 0 5px rgba(#000, 0.5);
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(#000, 0.2);
+      }
+
+      @media $display-breakpoints.sm-and-up {
+        right 40px;
+        bottom 40px;
+      }
+    }
+  }
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
+
+  @media $display-breakpoints.md-and-up {
+    transform: translateX(-100%);
+  }
+}
+.slide-enter-to,
+.slide-leave {
+  transform: translateX(0);
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s;
+}

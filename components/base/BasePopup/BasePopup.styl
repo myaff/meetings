@@ -1,0 +1,81 @@
+.base-popup {
+  fixed(0px, 0px);
+  size(100%);
+  z-index: 5;
+  background: rgba($color--grey_dark, 0.5);
+
+  &__inner {
+    height: 100%;
+  }
+
+  &__window-wrapper {
+    width 100%;
+    min-height: 100%;
+    flexy(center, center);
+    overflow-y: auto;
+    padding: 0;
+
+    @media $display-breakpoints.sm-and-up {
+      padding: 20px;
+    }
+    @media $display-breakpoints.md-and-up {
+      padding: 48px;
+    }
+  }
+
+  &__window {
+    width: 100%;
+    background: $color--white;
+    box-shadow: 0 0 40px rgba($color--black, 0.2);
+
+    @media $display-breakpoints.sm-and-up {
+      border-radius: 8px;
+    }
+
+    &.size--small {
+      max-width 400px
+    }
+    &.size--medium {
+      max-width 600px;
+    }
+    &.size--big {
+      max-width 800px;
+    }
+  }
+
+  &__title {
+    padding: 20px 20px 10px;
+    font: bold 32px/1 $font-accent;
+    text-align center;
+
+    @media $display-breakpoints.sm-and-up {
+      padding: 40px 40px 20px;
+    }
+  }
+
+  &__content {
+    padding: 10px 20px 20px;
+
+    @media $display-breakpoints.sm-and-up {
+      padding: 20px 40px 40px;
+    }
+  }
+
+  &__close {
+    absolute(0px);
+    right: 0px;
+    z-index 5
+
+    @media $display-breakpoints.sm-and-up {
+      display none
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

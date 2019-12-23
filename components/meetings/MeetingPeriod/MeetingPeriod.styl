@@ -1,0 +1,27 @@
+.meeting-period {
+  flexy(flex-start, center, wrap);
+
+  &__title {
+    flex: 0 0 100%;
+    margin-bottom: 0.5em;
+  }
+
+  &__dates,
+  &__times {
+    flexy(flex-start, center);
+
+    &-icon {
+      flex: 0 0 1em;
+      font-size: 20px;
+      margin-right: 0.5em;
+    }
+  }
+  &__dates {
+    margin-right: 32px;
+  }
+
+  &__content {
+    margin-top: 1em;
+    flex: 0 0 100%;
+  }
+}

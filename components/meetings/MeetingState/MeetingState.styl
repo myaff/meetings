@@ -1,0 +1,16 @@
+.meeting-state {
+  display inline-block
+  padding: 0 0.5em;
+  border-radius: 0.25em;
+  color: $color--white;
+
+  &.--done {
+    background: $color--error;
+  }
+  &.--planned {
+    background: $color--success;
+  }
+  &.--now {
+    background: $color--primary;
+  }
+}

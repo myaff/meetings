@@ -1,0 +1,20 @@
+@import 'vue-select/vue-select.styl';
+.base-select {
+  &__label {
+    display block
+    font: $font-size-base/1 $font-base;
+    margin-bottom: 0.5em;
+    transform: translateZ(0);
+
+    .required-star {
+      color: $color--error;
+    }
+  }
+
+  &__select {
+    font: $font-size-base $font-base;
+    background: $color--light;
+    box-shadow: inset 0 0 5px rgba($color--black, 0.1);
+    border-radius: 0.25em;
+  }
+}

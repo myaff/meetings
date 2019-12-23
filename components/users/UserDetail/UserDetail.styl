@@ -1,0 +1,56 @@
+.user-detail {
+  background: $color--white;
+  box-shadow: 0 0 5px rgba($color--black, 0.1);
+  padding: 40px 20px 20px;
+  border-radius: 4px;
+  width 100%;
+  min-height: 100%;
+
+  @media $display-breakpoints.sm-and-up {
+    padding: 40px;
+  }
+
+  &__name {
+    &[contenteditable="true"] {
+      border-radius: 4px;
+      outline: none;
+      padding-left: 6px;
+      margin-left: -6px;
+      background: $color--grey_light;
+    }
+  }
+
+  &__save-btn {
+    absolute(6px);
+    right: 6px;
+    z-index: 1;
+  }
+
+  &__meetings,
+  &__meetings-empty {
+    margin-top: 20px;
+
+    @media $display-breakpoints.sm-and-up {
+      margin-top 40px
+    }
+  }
+  &__meetings-empty {
+    color: $color--grey_dark;
+  }
+
+  &__actions {
+    absolute(10px);
+    right: 10px;
+    flexy(flex-end, center);
+  }
+
+  &__close {
+    @media $display-breakpoints.md-and-up {
+      display none;
+    }
+  }
+
+  &__meetings-title {
+    margin-bottom: 1em;
+  }
+}

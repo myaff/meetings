@@ -1,0 +1,6 @@
+{
+  "viewDestination": "./pages",
+  "storeDestination": "./store",
+  "componentDestination": "./components",
+  "templatePath": "./vg-templates"
+}

@@ -1,0 +1,83 @@
+.base-button {
+  display: inline-block;
+  min-width: 125px;
+  font: $font-size-base/1 $font-base;
+  text-transform uppercase;
+  text-align center;
+  padding: 1em 2em;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  {hover-focus-active} {
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  // themes
+  &.theme--primary {
+    background: $color--primary;
+    color: #fff;
+
+    {hover-active} {
+      background: darken($color--primary, 10%);
+    }
+  }
+  &.theme--light {
+    background: $color--grey_light;
+    color: $color--black_light;
+    border: 1px solid rgba($color--grey, 0.6);
+
+    {hover-active} {
+      background: darken($color--grey_light, 5%);
+    }
+  }
+  &.theme--danger {
+    background: $color--error;
+    color: $color--white;
+
+    {hover-active} {
+      background: darken($color--error, 10%);
+    }
+  }
+  &.theme--transparent {
+    color: rgba($color--black_light, 0.5);
+
+    {hover-active} {
+      color: darken($color--black_light, 5%);
+      background: rgba($color--grey_light, 0.5);
+    }
+  }
+
+  // shape
+  &.shape--square {
+    size(2em);
+    padding: 0.5em;
+    min-width: unset;
+  }
+  &.shape--circle {
+    circle(2em);
+    padding: 0.5em;
+    min-width: unset;
+  }
+
+  // sizes
+  &.size--big {
+    font-size: 20px;
+  }
+  &.shape--square.size--big,
+  &.shape--circle.size--big {
+    font-size: 30px;
+
+    @media $display-breakpoints.sm-and-up {
+      font-size: 40px;
+    }
+  }
+}

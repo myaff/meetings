@@ -1,0 +1,34 @@
+.page--meetings {
+  .meetings {
+    flexy(flex-start, stretch);
+    background: $color--light;
+
+    @media $display-breakpoints.md-and-up {
+      height 100%
+      > .vb {
+        height: 100%;
+      }
+    }
+
+    &__content {
+      padding: 20px;
+    }
+
+    &__action-btn {
+      fixed();
+      z-index: 3;
+      right: 20px;
+      bottom: 20px;
+      box-shadow: 0 0 5px rgba(#000, 0.5);
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(#000, 0.2);
+      }
+
+      @media $display-breakpoints.sm-and-up {
+        right 40px
+        bottom 40px
+      }
+    }
+  }
+}

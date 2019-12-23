@@ -1,0 +1,19 @@
+.user-simple {
+  flexy(flex-start, baseline, wrap);
+  max-width: fit-content;
+  
+  @media $display-breakpoints.sm-and-up {
+    flex-wrap: nowrap;
+  }
+
+  &__name {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    margin-right: 0.5em;
+  }
+  &__role {
+    flex: 0 0 auto;
+    margin-top: 0.25em;
+  }
+}

@@ -1,0 +1,19 @@
+.meeting-add {
+  &__field {
+    margin-bottom: 16px;
+  }
+  &__double-field {
+    flexy(space-between, baseline);
+
+    & ^[0]__field {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+  &__form-btns {
+    margin-top: 32px;
+    flexy(space-between, center);
+  }
+  &__form-btn {
+    flex: 0 0 calc(50% - 10px);
+  }
+}

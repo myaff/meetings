@@ -1,0 +1,30 @@
+.app-nav-panel {
+  &__nav-item {
+    font-size: 40px;
+    size(1em);
+    line-height 1
+    margin: 0 -0.25em 0.5em;
+
+    @media $display-breakpoints.sm-and-up {
+      margin: 0 auto 0.5em;
+    }
+  }
+
+  &__nav-link {
+    display block
+    size(100%)
+    line-height 1;
+    padding: 0.25em;
+    box-sizing: border-box;
+    color: lighten($color--black_light, 10%);
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color--black_light;
+    }
+
+    &.nuxt-link-active {
+      color: $color--primary;
+    }
+  }
+}
