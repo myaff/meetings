@@ -32,7 +32,7 @@ module.exports = {
       {
         rel: "icon",
         type: "image/x-icon",
-        href: "/favicon.ico"
+        href: "./assets/favicon.ico"
       }
     ],
     script: []
