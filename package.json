@@ -28,7 +28,7 @@
   "homepage": "https://github.com/myaff/meetings#readme",
   "dependencies": {
     "lodash": "^4.17.15",
-    "luxon": "^1.21.3",
+    "luxon": "^2.5.2",
     "svg4everybody": "^2.1.9",
     "vue": "^2.6.10",
     "vue-datetime": "^1.0.0-beta.11",
